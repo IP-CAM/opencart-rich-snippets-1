@@ -1,3 +1,11 @@
+<!-- Navigation: Begin -->
+<div class="breadcrumb" xmlns:v="http://rdf.data-vocabulary.org/#">
+	<?php foreach ($breadcrumbs as $i=> $breadcrumb) { ?>
+	<?php echo $breadcrumb['separator']; ?><?php if($i+1<count($breadcrumbs)) { ?><span typeof="v:Breadcrumb"><a rel="v:url" property="v:title" href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a></span> <?php } else { ?><span typeof="v:Breadcrumb"><span rel="v:url" property="v:title"><?php echo $breadcrumb['text']; ?></span></span><?php } ?>
+	<?php } ?>
+</div>
+<!-- Navigation: End -->
+
 <!-- Snippets: Begin -->
 <div itemscope itemtype="http://data-vocabulary.org/Product">
   <?php if ($manufacturer) { ?>
